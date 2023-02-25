@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>认真写作业！</title>
+    <link rel="shortcut icon" href="https://xiaojiang233.xyz/favicon.ico">
+</head>
+<body>
+    <p style="font-size:80px">认真写作业！</p>
+    <div>v2.0.0</div><br>
+    <button id="full-screen-btn">全屏</button>
+    <font size="2"> 按esc退出全屏</font><br/>
+    <h1>音乐播放器</h1>
+    <input type="file" id="audioFileInput" accept=".mp3" onchange="playAudio()"><br>
+    <audio id="audioPlayer" controls></audio>
+    <script src="script.js"></script>
+    <h1>倒计时</h1>
+    <div>
+      <label for="countdown-hours">时:</label>
+      <input type="number" id="countdown-hours" value="0" min="0">
+    </div>
+    <div>
+      <label for="countdown-minutes">分:</label>
+      <input type="number" id="countdown-minutes" value="0" min="0" max="59">
+    </div>
+    <div>
+      <label for="countdown-seconds">秒:</label>
+      <input type="number" id="countdown-seconds" value="0" min="0" max="59">
+    </div>
+    <div>
+      <button id="start-button">开始计时</button>
+    </div>
+    <div id="countdown"></div>
+    <script src="timer.js"></script>
+    <a href="about.html"  target="_blank">关于</a>
+
+</body>
+<script>
+    const html = document.querySelector('html');
+    const fullScreenBtn = document.getElementById('full-screen-btn');
+    fullScreenBtn.onclick = () => {
+      html.requestFullscreen()
+    }
+  </script>
+
